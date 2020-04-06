@@ -12,7 +12,6 @@ import com.capgemini.service.IEmployeeService;
 @RequestMapping("/bank")
 @CrossOrigin("http://localhost:1234")
 public class EmployeeController {
-	
 
 		    @Autowired
 		    IEmployeeService employeeService;
@@ -21,7 +20,7 @@ public class EmployeeController {
 		    public Employee findEmployeeById(@PathVariable("enter the id") int id) {
 		        Employee employee = employeeService.findEmployeeById(id);
 		        if (employee == null) {
-		        System.out.println("user not found for id=" + id);
+		        System.out.println("user not found for id="+ id);
 		        }
 		         return employeeService.findEmployeeById(id);
 		    }
